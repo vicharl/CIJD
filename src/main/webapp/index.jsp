@@ -1,6 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ page import="java.io.*,java.util.*,java.text.*,java.net.*" %>
+<%@ page import="java.io.*,java.util.*,java.text.*" %>
 
 <%!
     void write(List<String> contentList, String fileName, boolean append, String enc) {
@@ -64,13 +64,13 @@
 <h1>welcom haha!</h1></div>
 <div align="center"><h2><% out.print(currentTime); %></h2></div>
 <div align="center">
-    <%
+    VIP：<%
         out.print(ip);
-    %><br/>
-  <%
-  string strTmp =InetAddress.getLocalHost().getHostAddress();
-  out.print(strTmp)
+    %><br/>Docker IP：
+   <%
+        out.print(request.getLocalAddr());
   %>
+  
 
 
 
